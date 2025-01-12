@@ -7,11 +7,18 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
-public class Parser {   // final ? Pourrait être commune à logiciel_1 et logiciel_2
+public class Parser {
     
     private Parser() { }
 
-    /* Lit le fichier 'filePath' puis renvoie son contenu sous la forme d'un String. */
+    /**
+     * Lit le fichier 'filePath' puis renvoie son contenu sous la forme d'un String.
+     * @param filePath
+     * @return le contenu de filePath en String.
+     * @throws SecurityException
+     * @throws FileNotFoundException
+     * @throws IOException
+     */
     public static String parse(String filePath) throws SecurityException, FileNotFoundException, IOException {
         StringBuilder builder = new StringBuilder();
         try(BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), StandardCharsets.UTF_8))) {
