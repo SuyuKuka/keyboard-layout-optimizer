@@ -16,10 +16,6 @@ public class App {
         final List<String> inputFiles = new ArrayList<>();
 
         inputFiles.addAll(Arrays.asList(args)); // Si pas de switch pour présence d'options, pour tout mettre (args donnés au main)
-        /* Appels fonctionnant avec le run main classique */
-        //inputFiles.add(".\\ressources\\poésie.txt");
-        //inputFiles.add(".\\ressources\\alphabet.txt");
-        //inputFiles.add(".\\ressources\\test.txt");
 
         /* Appels fonctionnant pour le ./gradlew run */
         //inputFiles.add(getWorkingDirectoryPath("ressources/poésie.txt").toString());
