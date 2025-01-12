@@ -16,15 +16,11 @@ public class App {
         final List<String> inputFiles = new ArrayList<>();
 
         inputFiles.addAll(Arrays.asList(args)); // Si pas de switch pour présence d'options, pour tout mettre (args donnés au main)
-        /* Appels fonctionnant avec le run main classique */
-        //inputFiles.add(".\\ressources\\poésie.txt");
-        //inputFiles.add(".\\ressources\\alphabet.txt");
-        //inputFiles.add(".\\ressources\\test.txt");
 
         /* Appels fonctionnant pour le ./gradlew run */
         //inputFiles.add(getWorkingDirectoryPath("ressources/poésie.txt").toString());
         inputFiles.add(getWorkingDirectoryPath("ressources/alphabet.txt").toString());
-        inputFiles.add(getWorkingDirectoryPath("ressources/corpus.txt").toString());
+        //inputFiles.add(getWorkingDirectoryPath("ressources/corpus.txt").toString());
 
         System.out.println("(Logiciel 1) Lancement de l'analyseur de corpus.");
         new Analyzer(inputFiles);   // Run : Input -> ... -> Output
